@@ -18,7 +18,7 @@ export class TodoList {
         }
 
         if (priority < 1 || priority > 3) {
-            console.log("Prioritet måste vara mellan 1 och 3 (1 = viktigast).");
+            console.log("Prioritet måste vara mellan 1 och 3.");
             return false;
         }
 

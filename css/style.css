@@ -1,5 +1,6 @@
+/* Layout & Struktur */
 body {
-    font-family: sans-serif;
+    font-family: 'DM Sans', Arial, sans-serif;
     max-width: 600px;
     margin: auto;
     padding: 20px;
@@ -11,36 +12,29 @@ body {
     margin-bottom: 20px;
 }
 
-#todoContainer button {
-    margin-top: 10px;
-}
-
 #task {
     flex: 1;
 }
 
-#error {
-    color: red;
-    margin-bottom: 10px;
+#todoContainer button {
+    margin-top: 10px;
 }
 
-/* Grundstil för status-text */
+/* Status‑indikatorer */
 .status {
     font-weight: bold;
     margin: 6px 0;
 }
 
-/* Grön text för klar */
 .status-done {
     color: green;
 }
 
-/* Röd text för inte klar */
 .status-not-done {
     color: red;
 }
 
-/* Standard box */
+/* Todo‑box */
 .todo-item {
     border: 4px solid #ccc;
     padding: 12px;
@@ -49,7 +43,22 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Grön border när uppgiften är klar */
 .todo-done {
     border-color: green;
+}
+
+/* Felmeddelanden */
+#error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 8px;
+    background: #3752ff;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 8px;
 }

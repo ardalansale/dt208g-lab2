@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <title>Laboration 2 - Objektorienterad programmering</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <main>
+        <h1>Att göra‑lista</h1>
 
-    <h1>Att göra‑lista</h1>
+        <form id="todoForm">
+            <input id="task" type="text" placeholder="Ny uppgift">
+            <select id="priority">
+                <option value="1">1 Hög prioritet</option>
+                <option value="2">2 Medel prioritet</option>
+                <option value="3">3 Låg prioritet</option>
+            </select>
+            <button type="submit">Lägg till</button>
+        </form>
 
-    <form id="todoForm">
-        <input id="task" type="text" placeholder="Ny uppgift">
-        <select id="priority">
-            <option value="1">1 (viktigast)</option>
-            <option value="2">2</option>
-            <option value="3">3 (minst viktig)</option>
-        </select>
-        <button type="submit">Lägg till</button>
-    </form>
+        <div id="error"></div>
 
-    <div id="error"></div>
+        <div id="todoContainer"></div>
 
-    <div id="todoContainer"></div>
-
-    <script type="module" src="/src/main.ts"></script>
+        <script type="module" src="/src/main.ts"></script>
+    </main>
+    <footer>
+        <p>DT208G Programmering i TypeScript</p>
+        <p>Laboration 2 - Objektorienterad programmering</p>
+        <p>MIUN</p>
+        <p>Ardalan Sale</p>
+    </footer>
 </body>
 </html>
