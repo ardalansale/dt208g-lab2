@@ -26,8 +26,10 @@ export class TodoList {
         const newTodo: Todo = {
             task: task.trim(),
             completed: false,
-            priority: priority
+            priority: priority,
+            createdAt: new Date().toISOString()
         };
+
 
         // Lägg till den i listan
         this.todos.push(newTodo);

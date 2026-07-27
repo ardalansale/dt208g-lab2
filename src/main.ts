@@ -23,11 +23,16 @@ function renderTodos() {
         // Skapar själva HTML-innehållet för varje uppgift
         div.innerHTML = `
             <p>${todo.task} (prio: ${todo.priority})</p>
-
+            <p>Skapad: ${new Date(todo.createdAt).toLocaleString([], { 
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit"
+            })}</p>
             <p class="status ${todo.completed ? "status-done" : "status-not-done"}">
                 ${todo.completed ? "Klar" : "Inte avklarad"}
             </p>
-
             <button data-index="${index}" class="toggleBtn">
                 ${todo.completed ? "Markera icke-klar" : "Markera klar"}
             </button>
