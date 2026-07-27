@@ -70,6 +70,18 @@ export class TodoList {
         this.saveToLocalStorage();
     }
 
+    // Ta bort en uppgift
+    deleteTodo(index: number): void {
+    if (!this.todos[index]) {
+        console.log("Försökte ta bort en uppgift som inte finns.");
+        return;
+    }
+
+    this.todos.splice(index, 1);
+    this.saveToLocalStorage();
+}
+
+
     // Returnerar alla uppgifter
     getTodos(): Todo[] {
         return this.todos;
