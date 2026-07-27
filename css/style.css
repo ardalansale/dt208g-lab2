@@ -11,12 +11,6 @@ body {
     margin-bottom: 20px;
 }
 
-.todo-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
 #todoContainer button {
     margin-top: 10px;
 }
@@ -28,4 +22,34 @@ body {
 #error {
     color: red;
     margin-bottom: 10px;
+}
+
+/* Grundstil för status-text */
+.status {
+    font-weight: bold;
+    margin: 6px 0;
+}
+
+/* Grön text för klar */
+.status-done {
+    color: green;
+}
+
+/* Röd text för inte klar */
+.status-not-done {
+    color: red;
+}
+
+/* Standard box */
+.todo-item {
+    border: 4px solid #ccc;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+/* Grön border när uppgiften är klar */
+.todo-done {
+    border-color: green;
 }

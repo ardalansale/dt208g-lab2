@@ -18,17 +18,21 @@ function renderTodos() {
     // Hämtar alla uppgifter från klassen och går igenom dem en och en
     todoList.getTodos().forEach((todo, index) => {
         const div = document.createElement("div");
-        div.className = "todo-item";
+        div.className = `todo-item ${todo.completed ? "todo-done" : ""}`;
 
         // Skapar själva HTML-innehållet för varje uppgift
         div.innerHTML = `
             <p>${todo.task} (prio: ${todo.priority})</p>
-            <p>Status: ${todo.completed ? "Klar" : "Inte avklarad"}</p>
+
+            <p class="status ${todo.completed ? "status-done" : "status-not-done"}">
+                ${todo.completed ? "Klar" : "Inte avklarad"}
+            </p>
 
             <button data-index="${index}" class="toggleBtn">
-                ${todo.completed ? "Markera som icke-klarad" : "Markera som avklarad"}
+                ${todo.completed ? "Markera icke-klar" : "Markera klar"}
             </button>
         `;
+
 
         todoContainer.appendChild(div);
     });
@@ -65,7 +69,7 @@ form.addEventListener("submit", (e) => {
 
     // Visa ett enkelt felmeddelande om något är fel
     if (!success) {
-        errorBox.textContent = "Fel: kontrollera text och prioritet (1–3).";
+        errorBox.textContent = "Fel: kontrollera text.";
         return;
     }
 
