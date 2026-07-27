@@ -12,7 +12,6 @@ Projektet demonstrerar DOM‑hantering, validering och lagring i webbläsaren.
 https://todo-typescript-ardalan.netlify.app
 
 ## GitHub‑repo
-*(Lägg in din repo‑länk här)*  
 https://github.com/ardalansale/dt208g-lab2
 
 ## Funktionalitet
