@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+#todoForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#todoContainer button {
+    margin-top: 10px;
+}
+
+#task {
+    flex: 1;
+}
+
+#error {
+    color: red;
+    margin-bottom: 10px;
+}

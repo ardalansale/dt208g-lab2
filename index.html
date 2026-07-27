@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1>Att göra‑lista</h1>
+
+    <form id="todoForm">
+        <input id="task" type="text" placeholder="Ny uppgift">
+        <select id="priority">
+            <option value="1">1 (viktigast)</option>
+            <option value="2">2</option>
+            <option value="3">3 (minst viktig)</option>
+        </select>
+        <button type="submit">Lägg till</button>
+    </form>
+
+    <div id="error"></div>
+
+    <div id="todoContainer"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
