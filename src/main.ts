@@ -24,21 +24,29 @@ function renderTodos() {
         div.innerHTML = `
             <p>${todo.task} (prio: ${todo.priority})</p>
             <p>Status: ${todo.completed ? "Klar" : "Inte avklarad"}</p>
-            <button data-index="${index}" class="completeBtn">Markera klar</button>
+
+            <button data-index="${index}" class="toggleBtn">
+                ${todo.completed ? "Markera som icke-klarad" : "Markera som avklarad"}
+            </button>
         `;
 
         todoContainer.appendChild(div);
     });
 
-    // Lägger till click-event på alla "Markera klar"-knappar
-    document.querySelectorAll(".completeBtn").forEach(btn => {
+    // Lägger till click-event på alla knappar
+    document.querySelectorAll(".toggleBtn").forEach(btn => {
         btn.addEventListener("click", (e) => {
             const index = Number((e.target as HTMLButtonElement).dataset.index);
+            const todo = todoList.getTodos()[index];
 
-            // Markerar uppgiften som klar i vår klass
-            todoList.markTodoCompleted(index);
+            // Enkel toggling: om klar → gör icke-klar, annars gör klar
+            if (todo.completed) {
+                todoList.unmarkTodoCompleted(index);
+            } else {
+                todoList.markTodoCompleted(index);
+            }
 
-            // Ritar om listan så att status uppdateras
+            // Ritar om listan så att knappen och status uppdateras
             renderTodos();
         });
     });

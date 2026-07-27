@@ -43,11 +43,26 @@ export class TodoList {
         const todo = this.todos[index];
 
         if (!todo) {
-        console.log("Försökte markera en uppgift som klar, men den fanns inte.");
+            console.log("Försökte markera en uppgift som klar, men den fanns inte.");
             return;
         }
 
         todo.completed = true;
+
+        // Spara den uppdaterade listan
+        this.saveToLocalStorage();
+    }
+
+    // Avmarkerar uppgift så att den inte längre är klar
+    unmarkTodoCompleted(index: number): void {
+        const todo = this.todos[index];
+
+        if (!todo) {
+            console.log("Försökte avmarkera en uppgift som inte finns.");
+            return;
+        }
+
+        todo.completed = false;
 
         // Spara den uppdaterade listan
         this.saveToLocalStorage();
@@ -63,7 +78,7 @@ export class TodoList {
         localStorage.setItem("todos", JSON.stringify(this.todos));
     }
 
-    // Hämtar todos från LocalStroage; ifall det finns några
+    // Hämtar todos från localStorage; ifall det finns några
     loadFromLocalStorage(): void {
         const saved = localStorage.getItem("todos");
 
