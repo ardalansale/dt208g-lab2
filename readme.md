@@ -9,7 +9,7 @@ En enkel todo‑applikation byggd i TypeScript där uppgifter sparas i LocalStor
 Projektet demonstrerar DOM‑hantering, validering och lagring i webbläsaren.
 
 ##Publicerad webbplats
-https://todo-typescript-ardalan.netlify.app
+https://dt208g-lab2-todo.netlify.app/
 
 ## GitHub‑repo
 https://github.com/ardalansale/dt208g-lab2
