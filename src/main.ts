@@ -66,10 +66,14 @@ function renderTodos() {
     document.querySelectorAll(".deleteBtn").forEach(btn => {
         btn.addEventListener("click", (e) => {
             const index = Number((e.target as HTMLButtonElement).dataset.index);
-            todoList.deleteTodo(index);
-            renderTodos();
+
+            if (confirm("Är du säker på att du vill ta bort denna uppgift?")) {
+                todoList.deleteTodo(index);
+                renderTodos();
+            }
         });
-    });
+});
+
 }
 
 // När man skickar formuläret (lägger till en uppgift)
